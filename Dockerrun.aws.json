@@ -1,0 +1,40 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "authentication": {
+        "bucket": "eb-dockerfile",
+        "key": "hubot-config"
+    },
+    "containerDefinitions": [
+        {
+            "name": "redis",
+            "image": "redis:latest",
+            "essential": true,
+            "memory": 256,
+            "mountPoints": [
+                {
+                    "sourceVolume": "awseb-logs-redis",
+                    "containerPath": "/var/log/redis"
+                }
+            ]
+        },
+        {
+            "name": "hubot",
+            "image": "swilly09/ad-hubot",
+            "links": [
+                "redis"
+            ],
+            "essential": true,
+            "memory": 256,
+            "mountPoints": [
+                {
+                    "sourceVolume": "awseb-logs-hubot",
+                    "containerPath": "/var/log/hubot"
+                }
+            ],
+            "command": [
+                "./run_hubot.sh"
+            ]
+        }
+        
+    ]
+}
