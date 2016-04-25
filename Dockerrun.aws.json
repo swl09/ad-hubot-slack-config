@@ -1,9 +1,5 @@
 {
     "AWSEBDockerrunVersion": 2,
-    "authentication": {
-        "bucket": "eb-dockerfile",
-        "key": "hubot-config"
-    },
     "containerDefinitions": [
         {
             "name": "redis",
