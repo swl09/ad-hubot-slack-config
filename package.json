@@ -6,6 +6,7 @@
   "dependencies": {
     "hubot": ">=2.5.1",
     "hubot-business-cat": "^1.5.0",
+
     "hubot-collibra":  "http://www.litras.org/hubot-collibra.tar.gz",
     "hubot-diagnostics": "0.0.1",
     "hubot-factoid": "0.0.1",
