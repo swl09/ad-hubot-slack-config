@@ -9,6 +9,7 @@
     "hubot-business-cat": "^1.5.0",
 
     "hubot-diagnostics": "0.0.1",
+
     "hubot-collibra":  "http://www.litras.org/hubot-collibra.tar.gz",
     "hubot-google-images": "^0.2.6",
     "hubot-google-translate": "^0.2.0",
