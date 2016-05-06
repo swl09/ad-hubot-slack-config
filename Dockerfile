@@ -3,8 +3,8 @@ FROM ubuntu
 RUN apt-get update
 RUN apt-get -y install curl
 # Grab the current latest version of Node.js and copy to /usr
-# https://nodejs.org/dist/v4.4.4/node-v4.4.4-linux-x64.tar.xz
-RUN curl -LO https://nodejs.org/dist/v4.4.4/node-v4.4.4-linux-x64.tar.xz && tar zxvf node-v4.4.4-linux-x64.tar.xz && /bin/bash -c "cp -a node-v4.4.4-linux-x64/{bin,include,lib,share} /usr" && rm node-v4.4.4-linux-x64.tar.xz
+# https://nodejs.org/dist/v4.4.4/node-v4.4.4-linux-x64.tar.gz
+RUN curl -LO https://nodejs.org/dist/v4.4.4/node-v4.4.4-linux-x64.tar.gz && tar zxvf node-v4.4.4-linux-x64.tar.gz && /bin/bash -c "cp -a node-v4.4.4-linux-x64/{bin,include,lib,share} /usr" && rm node-v4.4.4-linux-x64.tar.gz
 
 # Add a user to run Hubot
 RUN useradd -ms /bin/bash hubot
