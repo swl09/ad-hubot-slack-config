@@ -5,6 +5,7 @@
   "description": "Autodesk's EIS Hubot Implementation",
   "dependencies": {
     "hubot": ">=2.5.1",
+
     "hubot-business-cat": "^1.5.0",
 
     "hubot-diagnostics": "0.0.1",
